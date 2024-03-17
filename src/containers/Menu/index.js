@@ -6,7 +6,7 @@ import "./style.scss";
 
 const Menu = () => (
   <nav>
-    <Logo />
+  <Logo />
     <ul>
       <li>
         <a href="#nos-services">Nos services</a>
