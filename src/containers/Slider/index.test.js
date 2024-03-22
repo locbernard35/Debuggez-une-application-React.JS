@@ -36,9 +36,30 @@ describe("When slider is created", () => {
       </DataProvider>
     );
     await screen.findByText("World economic forum");
-    await screen.findByText("janvier");
+    await screen.findByText("janvier");// Test lengh -1 
     await screen.findByText(
       "Oeuvre à la coopération entre le secteur public et le privé."
     );
+   
+
   });
 });
+ 
+
+  describe("controle txt=>World Gaming Day", () => {
+
+    it("screenobjet contenant->document.body", async () => {
+      window.console.error = jest.fn();
+      api.loadData = jest.fn().mockReturnValue(data);
+      render(
+        <DataProvider>
+          <Slider />
+        </DataProvider>
+      );  
+     
+      //  await screen.findByText("xxxWorld Gaming Dayxxx");// Test add   =>flase
+      await screen.findByText("World Gaming Day");// Test add   =>true
+    });
+  });
+
+
