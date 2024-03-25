@@ -1,14 +1,14 @@
-import Menu        from "../../containers/Menu"; // Correct   
+import Menu        from "../../containers/Menu";  
 import ServiceCard from "../../components/ServiceCard";
 import EventCard   from "../../components/EventCard";
 import PeopleCard  from "../../components/PeopleCard";
 
 import "./style.scss";
-import EventList   from "../../containers/Events";// Nos réalisations
-import Slider      from "../../containers/Slider";// Correct
+import EventList   from "../../containers/Events";
+import Slider      from "../../containers/Slider";
 import Logo        from "../../components/Logo";
 import Icon        from "../../components/Icon";
-import Form        from "../../containers/Form";// Correct
+import Form        from "../../containers/Form";
 import Modal       from "../../containers/Modal";
 import { useData } from "../../contexts/DataContext";
 
@@ -44,7 +44,7 @@ const Page = () => {
       <section className="SliderContainer">
         <Slider />
       </section>
-      <section className="ServicesContainer">
+      <section className="ServicesContainer" id="nos-services">
         <h2 className="Title">Nos services</h2>
         <p>Nous organisons des événements sur mesure partout dans le monde</p>
         <div className="ListContainer">
@@ -73,11 +73,11 @@ const Page = () => {
           </ServiceCard>
         </div>
       </section>
-      <section className="EventsContainer">
+      <section className="EventsContainer" id="nos-realisations">
         <h2 className="Title">Nos réalisations</h2>
         <EventList />
       </section>
-      <section className="PeoplesContainer">
+      <section className="PeoplesContainer" id="notre-equipe">
         <h2 className="Title">Notre équipe</h2>
         <p>Une équipe d’experts dédiés à l’ogranisation de vos événements</p>
         <div className="ListContainer">

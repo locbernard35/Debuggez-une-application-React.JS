@@ -1,12 +1,13 @@
-import PropTypes from "prop-types";
+import PropTypes from "prop-types";// Validation de types react
 import { useState } from "react";
 import Icon from "../../components/Icon";
 import "./style.scss";
 
 const Modal = ({ opened, Content, children }) => {
-  const [isOpened, setIsOpened] = useState(opened);
+
+const [isOpened, setIsOpened] = useState(opened);// return default=> flase
   return (
-    <>
+    <>  
       {children({ isOpened, setIsOpened })}
       {isOpened && (
         <div className="modal">
@@ -25,15 +26,12 @@ const Modal = ({ opened, Content, children }) => {
     </>
   );
 };
-
 Modal.defaultProps = {
   opened: false,
 }
-
 Modal.propTypes = {
-  opened: PropTypes.bool,
-  Content: PropTypes.node.isRequired,
+  opened:   PropTypes.bool,
+  Content:  PropTypes.node.isRequired,
   children: PropTypes.func.isRequired,
 }
-
 export default Modal;

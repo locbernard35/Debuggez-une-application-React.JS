@@ -2,7 +2,6 @@
 /* eslint-disable jsx-a11y/click-events-have-key-events */
 import { useState } from "react";
 import PropTypes from "prop-types";
-
 import "./style.scss";
 
 const Select = ({
@@ -13,13 +12,17 @@ const Select = ({
   label,
   type = "normal",
 }) => {
-  const [value, setValue] = useState();
-  const [collapsed, setCollapsed] = useState(true);
+  const [value, setValue] = useState();// return value select =True console
+  const [collapsed, setCollapsed] = useState(true);// defaut=>true
+
+
+  //  onClick=>Call=>changeValue(null)
   const changeValue = (newValue) => {
-    onChange();
+    onChange(newValue);// avant underfined
     setValue(newValue);
     setCollapsed(newValue);
   };
+
   return (
     <div className={`SelectContainer ${type}`} data-testid="select-testid">
       {label && <div className="label">{label}</div>}
@@ -97,5 +100,4 @@ Select.defaultProps = {
   type: "normal",
   name: "select",
 }
-
 export default Select;

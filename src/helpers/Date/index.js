@@ -13,4 +13,6 @@ export const MONTHS = {
   12: "décembre",
 };
 
-export const getMonth = (date) => MONTHS[date.getMonth()];
+export const getMonth = (date) => MONTHS[date.getMonth() +1];// nobug
+//  export const getMonth = (date) => MONTHS[date.getMonth()];// add mois +1 
+// jest=> 39 => await.findByText("janvier");
